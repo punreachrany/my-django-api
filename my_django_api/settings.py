@@ -95,7 +95,13 @@ DATABASES = {
 #     }
 # }
 
-DATABASES['default'] = dj_database_url.parse(config('DATABASE_URL'))
+# DATABASES['default'] = dj_database_url.parse(config('DATABASE_URL')) # For RENDER
+
+DATABASES = {
+    'default': dj_database_url.config(
+        default=config('DATABASE_URL_RAILWAY')
+    )
+}
 
 
 
