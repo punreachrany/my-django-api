@@ -15,6 +15,10 @@ def get_user(request):
     serializer = UserSerializer(users, many=True)
     return Response(serializer.data)
 
+@api_view(['GET'])
+def get_test(request):
+    return Response({"Test":"SUCCESS :)"})
+
 @api_view(['POST'])
 def create_user(request):
     serializer = UserSerializer(data=request.data)
