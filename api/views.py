@@ -17,7 +17,7 @@ def get_user(request):
 
 @api_view(['GET'])
 def get_test(request):
-    return Response({"Test":"SUCCESS :)"})
+    return Response({"Test":"SUCCESS HAHA :)"})
 
 @api_view(['POST'])
 def create_user(request):
